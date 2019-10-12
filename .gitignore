@@ -24,4 +24,4 @@ node_modules/
 vendor/
 
 # Webpack output folder.
-assets/dist
+assets/build
