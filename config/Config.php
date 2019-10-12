@@ -13,12 +13,12 @@ class Config {
 
 		//	Check that the filename and key is valid
 		if( sizeof($filename_and_key) !== 2 ){
-			return false;
+			return null;
 		}
 
 		//	Check that the filename exists
 		if( !file_exists(__DIR__.'/'.$filename_and_key[0].'.php') ){
-			return false;
+			return null;
 		}
 
 		//	Loads the array in the file
@@ -26,7 +26,7 @@ class Config {
 		
 		// Checks that the config is an array
 		if( !is_array($config) ){
-			return false;
+			return null;
 		}
 
 		return $config[ $filename_and_key[1] ];
